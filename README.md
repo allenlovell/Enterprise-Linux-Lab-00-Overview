@@ -203,6 +203,8 @@ Topics will include:
 - Identity mapping
 - Enterprise accounts
 
+---
+
 ### DNS and Networking
 
 Enterprise authentication depends heavily on networking and DNS; therefore we will analyze:
@@ -221,6 +223,8 @@ This reinforces an important help desk and systems administration lesson:
 > *When authentication fails, the problem may not actually be the user's password.*
 
 DNS, networking, time synchronization, certificates, directory services, and client configuration can all affect authentication.
+
+---
 
 ### Windows and Linux Administration
 
@@ -256,4 +260,8 @@ FreeIPA
 ```
 
 This gives us an opportunity to compare how similar enterprise problems are solved using different technologies.
+
+---
+
+
 
