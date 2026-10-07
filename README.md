@@ -263,5 +263,30 @@ This gives us an opportunity to compare how similar enterprise problems are solv
 
 ---
 
+### Security
+
+Security will be incorporated into the environment rather than treated as a completely separate topic.  I do that because sometimes things like this are not just plug and play at anytime, and any good security measures are built-in and not an afterthought.  Eventually this lab will include centralized security monitoring and logging.
+
+One of the planned components is **Wazuh**.  This provides capabilities such as:
+
+- Log collection
+- Security monitoring
+- File integrity monitoring
+- Vulnerability detection
+- Configuration assessment
+- Security alerts
+- Endpoint monitoring
+
+This allows the project to progress from:
+
+> *"Can I make the computer work?"*
+
+to:
+
+> *"Can I determine what happened when something goes wrong?"*
+
+That contrast is notably important when moving from general IT support toward cybersecurity(my ultimate goal).
+
+---
 
 
