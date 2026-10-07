@@ -27,7 +27,9 @@ The **first** environment will establish how Linux can provide necessary infrast
 
 ## Why Build This Lab?
 
-Enterprise environments are handled fairly well through Microsoft Server and AD(along with a plethora of repositories, documentation, and quality of life build-ins), so why try to improve on it?  <ins>**BECAUSE**</ins> I don't enjoy *microsoft...*  I have been daily driving Linux in one form or another for 8 years now and I don't plan on stopping.  That, and enterprise environments are rarely made up of a single operating system or technology stack.
+Enterprise environments are handled fairly well through Microsoft Server and AD(along with a plethora of repositories, documentation, and quality of life build-ins), so why try to improve on it?  
+> <ins>**BECAUSE**</ins> I don't enjoy *microsoft...*
+I have been daily driving Linux in one form or another for 8 years now and I don't plan on stopping.  That, and enterprise environments are rarely made up of a single operating system or technology stack.
 
 **A company may have:**
 - Windows workstations
@@ -48,7 +50,7 @@ Understanding how all of these systems and components work and fit together is m
 
 > *Linux isn't limited to being a server OS crammed between Windows infrastructure.  Linux can provide **many** of the core services that make an enterprise environment function.*
 
-*"Many," being the operative word here, but we will get into that further into the lab.
+***"Many,"*** being the operative word here, but we will get into that further into the lab.
 
 At the same time, the project will analyze where Microsoft and Linux technologies differ, where they overlap, and where interoperability becomes important.
 
