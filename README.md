@@ -130,7 +130,7 @@ The Fedora KDE workstation will join to the Linux-native environment and authent
 
 ---
 
-# Why Use Two Separate Environments?
+## Why Use Two Separate Environments?
 
 The two environments will initially and **<ins>INTENTIONALLY</ins>** remain separate.  Attempting to make both environments work together immediately would make it difficult to determine what is responsible when something breaks.
 
