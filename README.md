@@ -129,3 +129,131 @@ The Fedora KDE workstation will join to the Linux-native environment and authent
 >*What does an enterprise environment look like when it is designed around Linux rather than around compatibility with Windows?*
 
 ---
+
+# Why Use Two Separate Environments?
+
+The two environments will initially and **<ins>INTENTIONALLY</ins>** remain separate.  Attempting to make both environments work together immediately would make it difficult to determine what is responsible when something breaks.
+
+Instead, we will establish two (*hopefully*) clean baselines:
+
+```text
+Microsoft-Compatible
+
+Samba AD
+    |
+Windows 11
+```
+
+and:
+
+```text
+Linux-Native
+
+FreeIPA
+    |
+Fedora KDE
+```
+
+Once both environments work independently, we can begin investigating where interoperability can(*or should...*) happen.
+
+This creates a progression:
+
+```text
+1. Build
+   |
+2. Configure
+   |
+3. Authenticate
+   |
+4. Administer
+   |
+5. Secure
+   |
+6. Troubleshoot
+   |
+7. Compare
+   |
+8. Integrate
+```
+
+This approach also makes the project easier to document and troubleshoot because each stage has a clearly defined objective.
+
+---
+
+# What We(*or just I*) Will Learn
+
+> *again, hopefully...*
+
+Throughout the project we will work with many of the systems and concepts encountered in real enterprise IT environments.
+
+### Identity and Authentication
+
+We will learn how centralized identity systems work and how clients authenticate against them.
+
+Topics will include:
+
+- Active Directory concepts
+- LDAP
+- Kerberos
+- Users
+- Groups
+- Organizational structure
+- Authentication vs. authorization
+- SSSD
+- Identity mapping
+- Enterprise accounts
+
+### DNS and Networking
+
+Enterprise authentication depends heavily on networking and DNS; therefore we will analyze:
+
+- DNS records
+- Forward and reverse DNS
+- Hostnames
+- IP addressing
+- Network connectivity
+- Kerberos dependencies
+- Service discovery
+- Troubleshooting network authentication
+
+This reinforces an important help desk and systems administration lesson:
+
+> *When authentication fails, the problem may not actually be the user's password.*
+
+DNS, networking, time synchronization, certificates, directory services, and client configuration can all affect authentication.
+
+### Windows and Linux Administration
+
+The lab will provide experience managing both Windows and Linux endpoints in such ways:
+
+```text
+Windows Endpoint
+      |
+      v
+Samba AD
+      |
+      +-- Users
+      +-- Groups
+      +-- DNS
+      +-- Kerberos
+      +-- Policies
+```
+
+***vs.***:
+
+```text
+Fedora Endpoint
+      |
+      v
+FreeIPA
+      |
+      +-- Users
+      +-- Groups
+      +-- Kerberos
+      +-- LDAP
+      +-- SSSD
+      +-- Access Policies
+```
+
+This gives us an opportunity to compare how similar enterprise problems are solved using different technologies.
+
