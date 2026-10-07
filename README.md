@@ -52,8 +52,80 @@ Understanding how all of these systems and components work and fit together is m
 
 > *Linux isn't limited to being a server OS crammed between Windows infrastructure.  Linux can provide **many** of the core services that make an enterprise environment function.*
 
-***"Many,"*** being the operative word here, but we will get into that further into the lab.
+***"<ins>Many</ins>,"*** being the operative word here, but we will get into that further into the lab.
 
 At the same time, the project will analyze where Microsoft and Linux technologies differ, where they overlap, and where interoperability becomes important.
+
+---
+
+# The Two Enterprise Environments
+
+## Environment 1: *Microsoft-Compatible Architecture*
+
+The first environment wll use **Samba Active Directory** as its core system for identity and authentication.
+
+```text
+              CORP ENTERPRISE
+                    |
+              Samba AD DC
+                    |
+          +---------+---------+
+          |                   |
+      Users/Groups        DNS/Kerberos
+          |
+       Windows 11
+        Clients
+```
+
+Samba is capable of giving us an Active Directory-compatible domain controller, and allows a linux server to provide many of the services normally associated with a Windows Server AD environment including:
+
+- Centeralized user accounts
+- Groups
+- Organizational units
+- Kerberos authentication
+- LDAP directory services
+- DNS integration
+- Windows domain joining
+- SMB file services
+- and Group Policy functionality
+
+Windows 11 clients will join this domain as if they were taking part in a classic Windows enterprise environment, and gives us the excuse to answer a fundamental question:
+
+> *How far can Linux replace or reproduce the infrastructure normally provided by Microsoft Active Directory*
+
+---
+
+## Environment 2: *Linux-Native Architecture*
+
+The second environment will take a wholly different approach: Instead of plagiarizing Microsoft's Active Directory architecture, it will use **FreeIPA** as the identity management platform.
+
+```text
+              LINUX ENTERPRISE
+                    |
+                 FreeIPA
+                    |
+          +---------+---------+
+          |                   |
+      Identity             Policies
+          |
+       Fedora KDE
+        Client
+```
+
+FreeIPA provides an integrated identity management environment designed for Linux and other Unix-like systems, and combines technologies such as:
+
+- Kerberos
+- LDAP
+- DNS
+- Certiicate management
+- User and group management
+- Host management
+- SSSD integration
+- Host-based access control
+- Sudo(*root or admin*) policies
+
+The Fedora KDE workstation will join to the Linux-native environment and authenticate against the centralized identity infrastructure while affording us the opportunity to answer a different question:
+
+>*What does an enterprise environment look like when it is designed around Linux rather than around compatibility with Windows?*
 
 ---
